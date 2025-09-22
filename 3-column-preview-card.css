@@ -1,0 +1,173 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+:root {
+    --color1:hsl(31, 77%, 52%);
+    --color2:hsl(184, 100%, 22%);
+    --color3:hsl(179, 100%, 13%);
+    --primary-color:hsl(0, 0%, 95%);
+    --paragraph-color:hsla(0, 0%, 100%, 0.75);
+}
+body {
+    background-color:var(--primary-color);
+    font-size:15px;
+    font-family:"Big Shoulders","Lexend Deca", sans-serif;
+    height:auto;
+    min-height:100vh;
+    color:var(--primary-color);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:4rem 0;
+}
+main {
+    display:grid;
+    grid-template-rows:repeat(3,1fr);
+    gap:0;
+    width:90%;
+    text-align:left;
+}
+h1 {
+    position:absolute;
+    width:1px;
+    height:1px;
+    padding:0;
+    margin:-1px;
+    overflow:hidden;
+    clip:rect(0, 0, 0, 0);
+    border:0;
+}
+h2 {
+    font-family:"Barlow Condensed", sans-serif;
+    margin:1.2rem 2rem;
+    font-size:2rem;
+    font-weight:500;
+}
+p {
+    color:var(--paragraph-color);
+    line-height:1.5;
+    font-family:"Montserrat", sans-serif;
+    margin:1rem 2rem;
+    font-weight:400;
+}
+img {
+    margin:1.3rem 2rem;
+    display:flex;
+    justify-content:flex-start;
+    width:3.5rem;
+    height:2.3rem;
+}
+.sedan {
+    background-color:var(--color1);
+    border-top-left-radius:10px;
+    border-top-right-radius:10px;
+    padding:1rem;
+}
+.suv {
+    background-color:var(--color2);
+    padding:1rem;
+}
+.luxury {
+    background-color:var(--color3);
+    border-bottom-left-radius:10px;
+    border-bottom-right-radius:10px;
+    padding:1rem;
+}
+button {
+    width:44%;
+    height:13%;
+    border:none;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    font-family:"Montserrat", sans-serif;
+    font-size:0.8rem;
+    font-weight:600;
+    border-radius:2rem;
+    margin:1.3rem 2rem 3.5rem 2.3rem;
+    cursor:pointer;
+}
+a {
+    text-decoration:none;
+    color:inherit;
+}
+.sedan button {
+    background-color:var(--primary-color);
+    color:var(--color1);
+}
+.suv button {
+    background-color:var(--primary-color);
+    color:var(--color2)
+}
+.luxury button {
+    background-color:var(--primary-color);
+    color:var(--color3);
+}
+@media (min-width: 768px) and (max-width:1023px) {
+    section {
+        padding:2rem 0;
+    }
+    img {
+        width:4.2rem;
+        height:2.7rem;
+    }
+    h2 {
+        font-size:2.2rem;
+        margin:1.5rem 2rem;
+    }
+    p {
+        font-size:1.2rem;
+        margin:1.2rem 2rem;
+    }
+    button {
+        width:40%;
+        height:14%;
+        font-size:1.2rem;
+        margin:1.5rem 2rem 3.5rem 2.3rem;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    main {
+        grid-template-columns:repeat(3,1fr);
+        grid-template-rows:auto;
+        width:65%;
+        text-align:left;
+    }
+    .sedan {
+        border-top-right-radius:0;
+        border-bottom-left-radius:10px;
+        border-top-left-radius:10px;
+    }
+    .suv {
+        border-radius:0;
+    }
+    .luxury {
+        border-bottom-left-radius:0;
+        border-top-right-radius:10px;
+        border-bottom-right-radius:10px;
+    }
+    img {
+        width:4rem;
+        height:2.5rem;
+        margin:2rem;
+    }
+    h2 {
+        font-size:2.2rem;
+        margin:1.5rem 2rem;
+        font-weight:500;
+    }
+    p {
+        font-size:0.9rem;
+        margin:1.5rem 3.9rem 5rem 2rem;
+    }
+    button {
+        width:48%;
+        height:10%;
+        font-size:0.85rem;
+        margin:2.5rem 2rem 4rem 2.3rem;
+    }
+}
